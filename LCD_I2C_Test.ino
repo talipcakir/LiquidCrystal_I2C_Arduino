@@ -1,14 +1,14 @@
 #include <Wire.h> 
-#include <LiquidCrystal_I2C.h>  // I2C kütüphanesini verdiğim linkten indirip   include edebilirsiniz
+#include <LiquidCrystal_I2C.h>  // I2C lib.
 LiquidCrystal_I2C lcd(0x27,16,2); 
 void setup()
 {
- lcd.begin();                      // LCD yi başlatma
+ lcd.begin();                      // LCD start
  
- lcd.backlight();                 // lcd nin arka ışıgını açar
- lcd.print("Napion!");
+ lcd.backlight();                 // open background led
+ lcd.print("Hello");
  lcd.setCursor(0,1);
- lcd.print("test");
+ lcd.print("World!");
 }
 void loop()
 {
